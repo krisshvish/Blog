@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="{% static "/login/css/loginstyle.css" %}"/>
+
+    <style type="text/css" media="screen">
+
+      /* #bodyrep{
+        position: absolute;
+        height: 100%;
+        width: 20%;
+        opacity: 0.6;
+        background: #FA9F5C;
+      } */
+    </style>
+
+  </head>
+  <body style="background: url('/static/login/images/fall3.jpg'); background-size:cover;">
+  <div id = "bodyrep"></div>
+
+    <div class="container">
+      <form id="loginform" style="width:300px;" action="{% url 'user_login' %}" method="POST">
+        {% csrf_token %}
+        <div id="Heading" align="center">
+          <h4>Sign in</h4>
+          <br>
+        </div>
+
+        <div class="form-group">
+          <label for="username"> <h5>Username</h5> </label>
+          <input type="username" name="usernamefromtemplate" class="form-control" id="exampleInputUsername1" aria-describedby="emailHelp" placeholder="Enter username">
+        </div>
+
+        <div class="form-group">
+          <label for="password"> <h5>Password</h5> </label>
+          <input type="password" name="passwordfromtemplate" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <small id="credentialsHelp" class="form-text text-muted">Your login credentials will not be shared.</small>
+        </div>
+
+        <!-- {% if user.is_authenticated %}
+          <a class="btn btn-primary btn" href="{% url 'home:main' %}"></a>
+        {% else %}
+          <a class="btn btn-primary btn" value="Login" href="{% url 'user_login' %}"></a>
+          <small class="form-text" style="color:red">Invalid credentials!</small>
+        {% endif %} -->
+
+
+        <input class="btn btn-primary btn-sm" type="submit" name="" value="Login">
+        <!-- Accent-colored raised button with ripple -->
+        <!-- <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--primary">
+          Login
+        </button> -->
+
+        <br>
+        <br> <small><p>Click <a href="{% url 'home:register' %}">here</a> to register.</p></small>
+      </form>
+    </div>
+
+  </body>
+</html>
