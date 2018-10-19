@@ -1,0 +1,37 @@
+#timeline{
+  padding: 0px;
+  border-radius: 5px;
+  background: #FFF;
+  top: 150px;
+  height: 450px;
+  z-index: 1;
+  position: relative;
+  overflow: auto;
+}
+
+#postbox{
+  padding: 20px;
+  border-radius: 10px;
+  background: #FCF4EB;
+}
+
+#staticheader{
+  position:fixed;
+  padding: 10px;
+  padding-right: 50px;
+  background:#FFF;
+  align-items: center;
+  width:inherit;
+  border-radius: 15px;
+  z-index:2;
+}
+
+.align_right{
+  float: right;
+  width: 50%;
+}
+
+.align_left{
+  float: left;
+  width: 50%;
+}

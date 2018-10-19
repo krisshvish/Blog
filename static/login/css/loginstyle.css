@@ -1,0 +1,12 @@
+#loginform{
+  border-radius: 10px;
+  padding: 20px;
+  position: absolute;
+  width: 300px;
+  height: 370px;
+  font-family: Helvetica;
+  top: 25%;
+  left: 10%;
+  box-shadow: 0px 0px 30px 20px rgba(0,0,0,.6);
+  background: #FFF
+}
